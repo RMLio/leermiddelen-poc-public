@@ -1,0 +1,55 @@
+{
+  "title": "Implementatietraject tooling",
+  "logoLocation": "images/vlaanderen-logo.png",
+  "logoRedirectURL": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/oslo",
+  "queryFolder": "queries",
+  "showMilliseconds": false,
+  "defaultIDP": "",
+  "introductionText": "Make your choice in the menu on the left.",
+  "queryGroups": [
+    {
+      "id": "gr-use-case",
+      "name": "Use-case-specific queries"
+   }
+  ],
+  "queries": [
+    {
+      "id": "001",
+      "queryLocation": "example_count_spo.rq",
+      "name": "Count all triples in the dataset",
+      "description": "A dummy use-case-specific query, simply counting all triples in the dataset.",
+      "comment": "A comunicaContext specifying the source will be added automatically."
+    },
+    {
+      "id": "100",
+      "queryGroupId": "gr-use-case",
+      "queryLocation": "doelen-relaties.rq",
+      "name": "Doelen - relaties",
+      "description": "Controleer welke doelen door andere onderwijskoepels zijn gedefinieerd en wat hun relatie is met het opgegeven doel",
+      "indirectVariables": {
+        "queryLocations": ["variableQueries/doel-notaties.rq"]
+      }
+    },
+    {
+      "id": "200",
+      "queryGroupId": "gr-use-case",
+      "queryLocation": "doelen-overzicht.rq",
+      "name": "Doelen - overzicht",
+      "description": "Controleer welke doelen door andere onderwijskoepels zijn gedefinieerd en wat hun relatie is met het opgegeven doel"
+    },
+    {
+      "id": "300",
+      "queryGroupId": "gr-use-case",
+      "queryLocation": "doelen-missend.rq",
+      "name": "Doelen - missend",
+      "description": "Controleer welke doelen niet door andere onderwijsgroepen worden gedefinieerd"
+    },
+    {
+      "id": "400",
+      "queryGroupId": "gr-use-case",
+      "queryLocation": "leermiddel-doelen.rq",
+      "name": "Leermiddel - doelen",
+      "description": "Vind op welke manier dit leermiddel bepaalde doelen dient"
+    }
+  ]
+}
